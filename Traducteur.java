@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Traducteur {
     private static Map<String, Map<String, String>> dictionary = new HashMap<>();
 
-    public static void main(String[] args) {
+    public void traduire() {
         // Build the translation tree
         buildTree();
         

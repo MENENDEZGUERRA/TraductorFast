@@ -6,7 +6,7 @@ public class Traductor {
     
     private static Map<String, Map<String, String>> diccionario = new HashMap<>();
     
-    public static void main(String[] args) {
+    public void traducir() {
         // Se construye el árbol de traducción
         construirArbol();
         
