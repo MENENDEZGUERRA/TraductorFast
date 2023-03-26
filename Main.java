@@ -14,7 +14,7 @@ public class Main {
             System.out.println("Please select an option:");
             System.out.println("1. Traductor Español a En/Fr");
             System.out.println("2. Translator English to Es/Fr");
-            System.out.println("3. Traducteur Espagnol vers En/Fr");
+            System.out.println("3. Traducteur Frances vers En/Fr");
             System.out.println("4. Exit/Salir/Aller à");
 
             int option = scanner.nextInt();
@@ -39,19 +39,19 @@ public class Main {
     }
 
     public static void option1() {
-        System.out.println("Option 1 selected.");
+        System.out.println("Traductor Seleccionado");
         Traductor traductor = new Traductor();
         traductor.traducir();
     }
 
     public static void option2() {
-        System.out.println("Option 2 selected.");
+        System.out.println("Translator Selected");
         Translator translator = new Translator();
         translator.translate();
     }
 
     public static void option3() {
-        System.out.println("Option 3 selected.");
+        System.out.println("Traducteur Choisi");
         Traducteur traducteur = new Traducteur();
         traducteur.traduire();
     }
