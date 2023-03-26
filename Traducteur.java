@@ -6,15 +6,15 @@ public class Traducteur {
     private static Map<String, Map<String, String>> dictionary = new HashMap<>();
 
     public void traduire() {
-        // Build the translation tree
+        // Crear un árbol
         buildTree();
         
-        // Ask the user to enter a word to translate
+        // Pedir la palabra
         Scanner scanner = new Scanner(System.in);
         System.out.print("Saisissez un mot à traduire: ");
         String word = scanner.nextLine().toLowerCase();
         
-        // Look up the translation in the French to English/Spanish tree
+        // Buscar las posibles traducciones en el árbol
         String translation = findTranslation(word);
         if (translation != null) {
             System.out.println("Traduction de " + word + ": " + translation);
@@ -24,7 +24,7 @@ public class Traducteur {
     }
 
     private static void buildTree() {
-        // Add words and their translations to the tree
+        // Añadir palabras al árbol
         addWord("maison", "house", "casa");
         addWord("chien", "dog", "perro");
         addWord("devoirs", "homework", "tarea");
@@ -43,7 +43,7 @@ public class Traducteur {
     private static String findTranslation(String word) {
         if (dictionary.containsKey(word)) {
             Map<String, String> translations = dictionary.get(word);
-            // Ask the user to select a language for the translation
+            // Preguntar al ususario por el idioma a traducir
             Scanner scanner = new Scanner(System.in);
             System.out.print("Select the translation language (en/es): ");
             String language = scanner.nextLine().toLowerCase();

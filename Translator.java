@@ -2,20 +2,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-//This class translates form spanish to en/fr
+
 public class Translator {
     private static Map<String, Map<String, String>> dictionary = new HashMap<>();
 
     public void translate() {
-        // Build the translation tree
         buildTree();
-        
-        // Ask the user to enter a word to translate
+    
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a word to translate: ");
         String word = scanner.nextLine().toLowerCase();
-        
-        // Look up the translation in the Spanish to English/French tree
+    
         String translation = findTranslation(word);
         if (translation != null) {
             System.out.println("Translation of " + word + ": " + translation);
@@ -25,7 +22,6 @@ public class Translator {
     }
 
     private static void buildTree() {
-        // Add words and their translations to the tree
         addWord("casa", "house", "maison");
         addWord("perro", "dog", "chien");
         addWord("tarea", "homework", "devoirs");
@@ -44,7 +40,6 @@ public class Translator {
     private static String findTranslation(String word) {
         if (dictionary.containsKey(word)) {
             Map<String, String> translations = dictionary.get(word);
-            // Ask the user to select a language for the translation
             Scanner scanner = new Scanner(System.in);
             System.out.print("Select the translation language (en/fr): ");
             String language = scanner.nextLine().toLowerCase();
